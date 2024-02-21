@@ -1,0 +1,56 @@
+.gh-head {
+    background-color: transparent;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+}
+
+.gh-head-btn {
+    --multiplier: 1.3;
+}
+.wave-container {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.waves {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-70%);
+}
+
+@keyframes moveWave1 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(100%, 0, 0); }
+}
+
+@keyframes moveWave2 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(100%, 0, 0); }
+}
+
+@keyframes moveWave3 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(100%, 0, 0); }
+}
+
+.wave1 {
+    animation: moveWave1 5s linear infinite;
+}
+
+.wave2 {
+    animation: moveWave2 8s linear infinite;
+}
+
+.wave3 {
+    animation: moveWave3 10s linear infinite;
+}
