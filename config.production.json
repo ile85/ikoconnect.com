@@ -1,0 +1,17 @@
+{
+  "url": "https://ikoconnect.com",
+  "server": {
+    "port": 2369,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "ile",
+      "password": "new_password",
+      "database": "ile_db"
+    }
+  }
+
+}
