@@ -5,37 +5,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+    <meta property="og:title" content="{{meta_title}}" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{@site.url}}{{@site.path}}" />
+    <meta property="og:image" content="{{image_url}}" />
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+    <meta name="twitter:image" content="{{image_url}}">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
     
+
+
     {{ghost_head}}
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-<div class="gh-site">
-   
-
-    <header id="gh-head" class="gh-head gh-outer">
-       <div class="wave-container">
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-    <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
-    </defs>
-    
-    <g class="parallax">
-        <use class="wave1" xlink:href="#gentle-wave" x="48" y="0" fill="#a2d5f2"/>
-        <use class="wave2" xlink:href="#gentle-wave" x="48" y="3" fill="#6c9dd8"/>
-        <use class="wave3" xlink:href="#gentle-wave" x="48" y="5" fill="#477ab9"/>
-    </g>
-</svg>
-</div>
-        <div class="gh-head-inner gh-inner">
-            <div class="gh-head-title">Navigate the World of Innovation with Ikoconnect</div>
-            <div class="gh-head-brand">
-                
-                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+    <div class="gh-site">
+        <header id="gh-head" class="gh-head gh-outer">
+            <div class="wave-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+                    </defs>
+                            <g class="parallax">
+                                <use class="wave1" xlink:href="#gentle-wave" x="48" y="0" fill="#a2d5f2"/>
+                                <use class="wave2" xlink:href="#gentle-wave" x="48" y="3" fill="#6c9dd8"/>
+                                <use class="wave3" xlink:href="#gentle-wave" x="48" y="5" fill="#477ab9"/>
+                            </g>
+                </svg>
+            </div>
+            <a class="gh-head-logo" href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}">
+                        {{else}}
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
+            <div>                
                 <button class="gh-burger"></button>
             </div>
+            <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand-wrapper">
+                
+            </div>
+            
 
             <nav class="gh-head-menu">
                 {{navigation}}
@@ -57,7 +76,6 @@
                         {{#unless @member}}
                             {{#unless @site.members_invite_only}}
                                 <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
                             {{else}}
                                 <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Sign in</a>
                             {{/unless}}

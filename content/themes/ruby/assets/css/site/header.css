@@ -1,13 +1,34 @@
 .gh-head {
     background-color: transparent;
+    position: relative;
+    height: 100%; 
+    font-family: 'Roboto', sans-serif;
+
 }
 
-.gh-head-menu,
+
+.gh-head-menu { height: 100%; }
 .gh-head-actions {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.005em;
+}
+.gh-head-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* your existing styles */
+}
+
+.gh-head-title {
+    position: absolute; /* To overlay on top of the waves if that's what you want */
+    top: 50%; /* Adjust as necessary */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Or any color that suits the design */
+    font-size: 1.5em; /* Adjust size as necessary */
+    z-index: 10; /* Ensure it's above the waves */
 }
 
 .gh-head-btn {
@@ -17,6 +38,7 @@
     position: relative;
     height: 150px;
     overflow: hidden;
+   
 }
 
 .waves {
@@ -26,6 +48,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-70%);
+ 
 }
 
 @keyframes moveWave1 {
