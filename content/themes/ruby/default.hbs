@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
     
-
-
     {{ghost_head}}
 </head>
 
@@ -28,19 +26,11 @@
         <use class="wave1" xlink:href="#gentle-wave" x="48" y="0" fill="#a2d5f2"/>
         <use class="wave2" xlink:href="#gentle-wave" x="48" y="3" fill="#6c9dd8"/>
         <use class="wave3" xlink:href="#gentle-wave" x="48" y="5" fill="#477ab9"/>
-        <div class="gh-head-brand-wrapper">
-                    <a class="gh-head-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
-                        {{else}}
-                            {{@site.title}}
-                        {{/if}}
-                    </a>
-                </div>
     </g>
 </svg>
 </div>
         <div class="gh-head-inner gh-inner">
+            <div class="gh-head-title">Navigate the World of Innovation with Ikoconnect</div>
             <div class="gh-head-brand">
                 
                 <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
