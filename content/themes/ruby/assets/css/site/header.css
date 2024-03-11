@@ -21,15 +21,35 @@
     /* your existing styles */
 }
 
-.gh-head-title {
-    position: absolute; /* To overlay on top of the waves if that's what you want */
-    top: 50%; /* Adjust as necessary */
+.gh-head-logo {
+    position: absolute;
+    top: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff; /* Or any color that suits the design */
-    font-size: 1.5em; /* Adjust size as necessary */
-    z-index: 10; /* Ensure it's above the waves */
+    color: #000000; /* Change color as needed */
+    font-size: 1.5em; /* Adjust font-size as needed */
+    z-index: 20; /* Ensures it's above the wave SVG */
+    text-align: center; /* Center the text horizontally */
+    font-family: 'Orbitron', sans-serif; /* Use the secondary tech-style font */
+    font-weight: 700;
 }
+.gh-head-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-aligned-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto; /* This pushes the .right-aligned-items to the right */
+}
+
+.gh-head-link {
+    margin-left: auto; /* This will push the link to the right */
+}
+
 
 .gh-head-btn {
     --multiplier: 1.3;
@@ -38,6 +58,7 @@
     position: relative;
     height: 150px;
     overflow: hidden;
+    z-index: 1;
    
 }
 

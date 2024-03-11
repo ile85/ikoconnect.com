@@ -14,12 +14,9 @@
     padding-block: 0;
 }
 
-@media (max-width: 767px) {
-    .gh-head-inner {
-        /* Adjust the flex layout for mobile */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+@media (min-width: 992px) {
+    .related-column {
+        order: 1;
     }
 
     .gh-head-actions, .gh-head-menu {
@@ -53,3 +50,4 @@
         top: 1rem; /* Adjust top position */
     }
 }
+
