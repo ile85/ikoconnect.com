@@ -14,16 +14,42 @@
     padding-block: 0;
 }
 
-@media (min-width: 992px) {
-    .related-column {
-        order: 1;
+@media (max-width: 767px) {
+    .gh-head-inner {
+        /* Adjust the flex layout for mobile */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
-    .content-column {
-        order: 2;
+    .gh-head-actions, .gh-head-menu {
+        /* Stack the actions and menu vertically on mobile */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start of the flex container */
+        padding: 0.5rem; /* Add some padding for touch targets */
+        margin-top: 0.5rem; /* Add a little space between the menu and other elements */
     }
 
-    .sidebar-column {
-        order: 3;
+    .gh-burger {
+        /* Ensure burger menu is visible and clickable */
+        display: block;
+        position: absolute;
+        top: 1rem; /* Adjust top and right as necessary for your layout */
+        right: 1rem;
+        z-index: 100; /* Make sure it's above other elements */
+    }
+
+    /* Make sure the header is not hidden by any other elements */
+    header#gh-head {
+        z-index: 10; /* Adjust z-index to ensure it's on top */
+    }
+
+    /* Other responsive adjustments for header logo and elements */
+    .gh-head-logo {
+        position: relative; /* Adjust position for mobile */
+        transform: translate(-50%, -20%); /* Center it according to mobile header size */
+        left: 50%; /* Center horizontally */
+        top: 1rem; /* Adjust top position */
     }
 }
