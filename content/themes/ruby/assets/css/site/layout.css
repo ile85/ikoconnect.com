@@ -14,9 +14,13 @@
     padding-block: 0;
 }
 
-@media (min-width: 992px) {
-    .related-column {
-        order: 1;
+
+@media (max-width: 767px) {
+    .gh-head-inner {
+        /* Adjust the flex layout for mobile */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .gh-head-actions, .gh-head-menu {
@@ -41,7 +45,9 @@
     header#gh-head {
         z-index: 10; /* Adjust z-index to ensure it's on top */
     }
-
+    .post-feed {
+        padding-top: 100px; /* Adjust this value to push the content down */
+    }
     /* Other responsive adjustments for header logo and elements */
     .gh-head-logo {
         position: relative; /* Adjust position for mobile */

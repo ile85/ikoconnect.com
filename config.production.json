@@ -9,7 +9,7 @@
     "connection": {
       "host": "localhost",
       "user": "ile",
-      "password": "new_password",
+      "password": "2006",
       "database": "ile_db"
     }
   }
