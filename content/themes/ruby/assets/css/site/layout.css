@@ -19,7 +19,6 @@
     .site-main, .gh-inner {
     margin: 0 auto;
     max-width: var(--container-width, 1200px);
-    padding-top: 100px;
     }
 
     .gh-head-actions, .gh-head-menu {
