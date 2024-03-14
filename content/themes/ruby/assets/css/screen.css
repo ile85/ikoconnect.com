@@ -13,9 +13,5 @@
 @import "blog/related.css";
 @import "misc/utilities.css";
 @import "custom.css";
-@media (max-width: 767px) {
-    .site-main.gh-inner {
-        padding-top: 100px; /* Or enough value to push the content below the header */
-    }
-}
+
 

@@ -119,11 +119,7 @@
 @media (max-width: 767px) {
     .post-feed {
         grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 767px) {
-    .post-feed {
-        padding-top: 100px !important;
+        
     }
 }
 

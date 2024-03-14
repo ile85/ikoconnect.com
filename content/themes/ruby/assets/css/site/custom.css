@@ -1,5 +1,9 @@
 @media (max-width: 767px) {
-    .post-feed {
-        margin-top: 100px; /* Adjust this value as necessary */
+    .header-content {
+        padding-top: 4rem !important;
+    }
+
+    .card-container {
+        margin-top: 4rem !important;
     }
 }
