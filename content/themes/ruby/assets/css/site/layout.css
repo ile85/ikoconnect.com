@@ -16,12 +16,10 @@
 
 
 @media (max-width: 767px) {
-    .gh-head-inner {
-        /* Adjust the flex layout for mobile */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-top: 100px;
+    .site-main, .gh-inner {
+    margin: 0 auto;
+    max-width: var(--container-width, 1200px);
+    padding-top: 100px;
     }
 
     .gh-head-actions, .gh-head-menu {
