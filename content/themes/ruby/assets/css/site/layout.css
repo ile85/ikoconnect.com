@@ -19,6 +19,8 @@
     .site-main, .gh-inner {
     margin: 0 auto;
     max-width: var(--container-width, 1200px);
+   
+    
     }
 
     .gh-head-actions, .gh-head-menu {
@@ -28,6 +30,7 @@
         align-items: flex-start; /* Align items to the start of the flex container */
         padding: 0.5rem; /* Add some padding for touch targets */
         margin-top: 0.5rem; /* Add a little space between the menu and other elements */
+        
     }
 
     .gh-burger {

@@ -1,9 +1,0 @@
-@media (max-width: 767px) {
-    .gh-inner {
-        padding-top: 100px; /* Adjust as needed */
-    }
-
-    .post-feed {
-        padding-top: 120px; /* This value should be greater than the height of your header */
-    }
-}

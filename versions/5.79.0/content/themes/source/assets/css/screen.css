@@ -409,6 +409,8 @@ button.gh-form-input {
     margin: 0 auto;
     max-width: var(--container-width);
     width: 100%;
+    
+    
 }
 
 .gh-main {
