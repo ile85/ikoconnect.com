@@ -36,7 +36,7 @@
     .gh-burger {
         /* Ensure burger menu is visible and clickable */
         display: block;
-        position: absolute;
+        position: relative;;
         top: 1rem; /* Adjust top and right as necessary for your layout */
         right: 1rem;
         z-index: 100; /* Make sure it's above other elements */
