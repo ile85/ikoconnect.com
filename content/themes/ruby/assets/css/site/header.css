@@ -14,6 +14,7 @@
     text-transform: uppercase;
     letter-spacing: 0.005em;
 }
+
 .gh-head-inner {
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@
 
 .gh-head-logo {
     position: absolute;
-    top: 120%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000000; /* Change color as needed */

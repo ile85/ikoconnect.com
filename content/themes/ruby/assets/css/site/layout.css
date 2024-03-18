@@ -29,7 +29,8 @@
         flex-direction: column;
         align-items: flex-start; /* Align items to the start of the flex container */
         padding: 0.5rem; /* Add some padding for touch targets */
-        margin-top: 0.5rem; /* Add a little space between the menu and other elements */
+        margin-top: -55.5rem; /* Add a little space between the menu and other elements */
+        
         
     }
 
@@ -56,5 +57,6 @@
         left: 50%; /* Center horizontally */
         top: 1rem; /* Adjust top position */
     }
+
 }
 
