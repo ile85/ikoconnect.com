@@ -19,7 +19,11 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
-    
+    <script src="https://unpkg.com/gsap"></script>
+<script src="https://unpkg.com/gsap/TextPlugin.min.js"></script>
+<!-- Include SplitText only if you have access -->
+
+
 
 
     {{ghost_head}}
@@ -39,13 +43,9 @@
                                 <use class="wave3" xlink:href="#gentle-wave" x="48" y="5" fill="#477ab9"/>
                             </g>
                 </svg>
-                <a class="gh-head-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
-                        {{else}}
-                            {{@site.title}}
-                        {{/if}}
-                    </a>
+                <div class="wave-text-container">
+    <h1 class="animated-wave-text">Navigate the World of Innovation with Ikoconnect</h1>
+</div>
             </div>                   
             <div>                
                 <button class="gh-burger"></button>
@@ -87,6 +87,9 @@
     </header>
 
     <div class="site-content">
+        <div class="container">
+        <p class="subheadline">Your compass for tech insights and trends.</p>
+    </div>
         {{{body}}}
     </div>
 
@@ -113,7 +116,9 @@
     {{> "pswp"}}
 {{/is}}
 
-<script src="{{asset "built/main.min.js"}}"></script>
+<script src="https://unpkg.com/gsap"></script>
+<script src="https://unpkg.com/gsap/TextPlugin.min.js"></script>
+<script src="{{asset 'js/waveAnimation.js'}}"></script>
 
 
 {{ghost_foot}}
