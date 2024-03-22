@@ -85,20 +85,7 @@
     text-align: center;
     margin-bottom: 10px; /* Adjust as needed */
 }
-.animated-wave-text {
-    /* Style your text here */
-    position: relative;
-    font-size: 2rem;
-    color: #000000; /* Choose a color that makes the text readable over the waves */
-    animation: waveTextAnimation 10s linear infinite;
-}
-.wave-text-container {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 20%; /* Adjust based on where you want the text to appear relative to the waves */
-    z-index: 5; /* Ensure it's above the wave layers */
-}
+
 
 @keyframes moveWave1 {
     0% { transform: translate3d(0, 0, 0); }
@@ -114,17 +101,28 @@
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(100%, 0, 0); }
 }
-@keyframes textWaveAnimation {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px); /* Adjust based on the actual wave movement */
-    }
+@keyframes waveAnimation {
+    50% { transform: translateY(-10px); }
+}
+  
+.wave-text-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-30%);
+    z-index: 2;
 }
 
-.animated-wave-text {
-    animation: textWaveAnimation 5s infinite linear; /* Match your wave animation's duration and timing function */
+
+
+.animated-wave-letter {
+    display: inline-block;
+    animation: waveAnimation 4s ease-in-out infinite;
+    font-size: 2.3rem; /* Adjusts the font size */
+    margin-right: 1px; /* Adds spacing between letters */
+    letter-spacing: normal; /* Adjusts spacing */
+    animation-delay: calc(var(--i) * 0.10s); /* Staggers the animation start */
 }
 
 .wave1 {

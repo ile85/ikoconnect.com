@@ -19,13 +19,10 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
-    <script src="https://unpkg.com/gsap"></script>
-<script src="https://unpkg.com/gsap/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="{{asset "css/site/layout.css"}}">
+    
+    
 <!-- Include SplitText only if you have access -->
-
-
-
-
     {{ghost_head}}
 </head>
 
@@ -44,7 +41,7 @@
                             </g>
                 </svg>
                 <div class="wave-text-container">
-    <h1 class="animated-wave-text">Navigate the World of Innovation with Ikoconnect</h1>
+    <h1 id="animated-wave-text">Navigate the World of Innovation with Ikoconnect</h1>
 </div>
             </div>                   
             <div>                
@@ -87,9 +84,6 @@
     </header>
 
     <div class="site-content">
-        <div class="container">
-        <p class="subheadline">Your compass for tech insights and trends.</p>
-    </div>
         {{{body}}}
     </div>
 
@@ -116,9 +110,8 @@
     {{> "pswp"}}
 {{/is}}
 
-<script src="https://unpkg.com/gsap"></script>
-<script src="https://unpkg.com/gsap/TextPlugin.min.js"></script>
-<script src="{{asset 'js/waveAnimation.js'}}"></script>
+
+<script src="{{asset "js/waveAnimation.js"}}"></script>
 
 
 {{ghost_foot}}

@@ -1,25 +1,21 @@
-function waveAnimation() {
-    gsap.to('.wave1', {
-        duration: 5,
-        y: '+=10',
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut'
-    });
+document.addEventListener("DOMContentLoaded", function() {
+    const textContainer = document.getElementById("animated-wave-text");
+    const text = textContainer.innerText;
+    textContainer.innerHTML = ''; // Clear the original text
 
-    gsap.to('.wave2', {
-        duration: 5,
-        y: '+=8',
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut'
+    // Split the text into letters, but preserve words for spacing
+    let counter = 0; // A counter to keep track of individual letters
+    text.split('').forEach((char) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.className = 'animated-wave-letter';
+        // Use the counter to stagger the animation of each letter
+        span.style.setProperty('--i', counter++);
+        // Preserve spaces for word separation
+        if (char === ' ') {
+            textContainer.appendChild(document.createTextNode(' '));
+        } else {
+            textContainer.appendChild(span);
+        }
     });
-
-    gsap.to('.animated-wave-text', {
-        duration: 5, // Match with wave animation duration
-        x: '+=10', // Move text left and right by 10px; adjust as per your wave's movement
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut' // Use an easing function similar to the waves
-    });
-}
+});
