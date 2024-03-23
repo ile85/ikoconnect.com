@@ -21,6 +21,10 @@
     align-items: center;
     /* your existing styles */
 }
+.gh-burger.is-active + .navigation-menu {
+    display: flex; /* or whatever display value is appropriate */
+}
+
 
 .gh-head-logo {
     position: absolute;
