@@ -44,7 +44,11 @@
         "custom": {
             "navigation_layout": {
                 "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
                 "default": "Logo in the middle"
             },
             "title_font": {
@@ -90,5 +94,8 @@
         "postcss": "8.4.35",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
+    },
+    "dependencies": {
+        "cors": "^2.8.5"
     }
 }
