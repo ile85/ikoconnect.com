@@ -57,6 +57,16 @@
         left: 50%; /* Center horizontally */
         top: 1rem; /* Adjust top position */
     }
+    .navigation-menu {
+        display: none;
+        /* or transform: translateX(-100%); for off-canvas menus */
+    }
+    
+    /* CSS to show the menu when .is-open is added to the body */
+    .is-open .navigation-menu {
+        display: block; /* For a simple dropdown menu */
+        /* or transform: translateX(0); for off-canvas menus */
+    }
 
 }
 
